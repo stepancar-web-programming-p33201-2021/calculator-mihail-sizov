@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const labels=['+','-','*','/','1','2','3','4','5','6','7','8','9','0','=']
-const keyCodes=['+','-','*','/','=','1','2','3','4','5','6','7','8','9','0','Enter', 'Backspace','Delete','.']
+const keyCodes=['+','-','*','/','=','1','2','3','4','5','6','7','8','9','0','Enter', 'Backspace','Delete','Tab','.']
 
 class CalcButton extends React.Component {
   render() {
@@ -56,7 +56,7 @@ class CalculatorView extends React.Component{
 
   update(){
     if(this.state.value!=='')
-    this.setState({calc:this.state.funcs[this.state.op.toString()](this.state.calc,parseFloat(this.state.value+(this.state.value.charAt(this.state.value.length-1)==='.'?'0':'')))})
+    this.setState({calc:this.state.funcs[this.state.op.toString()](this.state.calc,parseFloat(this.state.value))})
   }
 
   clear(){
