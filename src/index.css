@@ -5,14 +5,15 @@
   --pad_width: 420px;
   --pad_paddings: 10px;
   --height: 35px;
-  --equal_width: var(--text_width);
+  --font: 32px;
+  --zero_width: 150px;
   --container_width: 440px;
   --shadow: #454545;
 }
 
 body, input{
   font-family: sans-serif;
-  font-size: var(--height);
+  font-size: var(--font);
 }
 
 .container{
@@ -65,25 +66,30 @@ input[type="button"] {
   border: 0px;
   box-shadow: 0 -3px var(--shadow) inset;
   margin: var(--button_margin);
+  color: #3a3a3a;
 }
 
 input[type="button"]:hover {
   border: 3px solid #68a0b7;
 }
 
-input[value="AC"] {
+input[value="AC"],input[value="⌫"] {
   background-color: #fa6b65;
   color: white;
 }
 
 input[value="+"],input[value="-"],
-input[value="*"],input[value="/"] {
+input[value="*"],input[value="/"],
+input[value="^"] {
   background-color: #a9a0df;
   color: white;
 }
 
 input[value="="] {
-  width:var(--equal_width);
   background-color: #3e6f81;
   color: white;
+}
+
+input[value="0"] {
+  width: var(--zero_width);
 }
