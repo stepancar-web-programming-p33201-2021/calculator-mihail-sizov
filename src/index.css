@@ -90,6 +90,6 @@ input[value="="] {
   color: white;
 }
 
-input[value="0"] {
+input[type="button"][value="0"] {
   width: var(--zero_width);
 }
