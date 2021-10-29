@@ -67,6 +67,7 @@ input[type="button"] {
   box-shadow: 0 -3px var(--shadow) inset;
   margin: var(--button_margin);
   color: #3a3a3a;
+  vertical-align: middle;
 }
 
 input[type="button"]:hover {
