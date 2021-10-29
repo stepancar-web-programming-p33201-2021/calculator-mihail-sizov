@@ -80,7 +80,7 @@ class CalculatorView extends React.Component{
     var keyCode = e.key;
     if(keyCode === 'Enter'){
       e.preventDefault();
-      this.inputUpdate(this.state.value+'=')
+      this.click('=')
     }
     if(keyCode === 'Backspace'){
       e.preventDefault();
@@ -96,20 +96,16 @@ class CalculatorView extends React.Component{
   }
 
   inputChange(e){
-    this.inputUpdate(e.target.value)
-  }
-
-  inputUpdate(value){
+    let value=e.target.value
     let lastChar=value.charAt(value.length-1)
-    if(lastChar.toString().match(/[0-9.]/)===null)
+    if(lastChar.toString().match(/[0-9]/)===null)
       this.setState({value:value.substr(0,value.length-1)})
     else
       this.setState({value:value})
-    if(lastChar.toString().match(/[/*+-=^]/)!==null)
+    if(lastChar.toString().match(/[/*+\-=^.]/)!==null)
       this.click(lastChar)
-    if(lastChar==='.' && this.state.value.toString().indexOf('.')!==-1)
-      this.setState({value:value.substr(0,value.length-1)})
   }
+
 
   deleteLast(){
     this.setState({value:this.state.value.substr(0,this.state.value.length-1)})
