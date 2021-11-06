@@ -6,6 +6,7 @@
   --pad_paddings: 10px;
   --height: 35px;
   --font: 32px;
+  --small-font: 24px;
   --zero_width: 150px;
   --container_width: 440px;
   --shadow: #454545;
@@ -74,9 +75,13 @@ input[type="button"]:hover {
   border: 3px solid #68a0b7;
 }
 
-input[value="AC"],input[value="⌫"] {
+input[value="Clear"],input[value="⌫"] {
   background-color: #fa6b65;
   color: white;
+}
+
+input[value="Clear"]{
+  font-size: var(--small-font);
 }
 
 input[value="+"],input[value="-"],

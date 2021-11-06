@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-const labels=['1','2','3','⌫','AC','4','5','6','+','-','7','8','9','*','/','0','.','=','^']
+const labels=['1','2','3','⌫','Clear','4','5','6','+','-','7','8','9','*','/','0','.','=','^']
 const keyCodes=['+','-','*','/','^','=','1','2','3','4','5','6','7','8','9','0','Enter', 'Backspace','Delete','Tab','.']
 
 class CalcButton extends React.Component {
@@ -52,7 +52,7 @@ class CalculatorView extends React.Component{
         this.setState({value:this.state.value+'.'})
       return
     }
-    if(operation==='AC'){
+    if(operation==='Clear'){
       this.clear()
       return
     }
